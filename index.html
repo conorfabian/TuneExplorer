@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1>Discover New Music</h1>
+        <form id="search-form" action="/" method="post">
+            <input autocomplete="off" autofocus type="text" name="song-input" id="song-input" placeholder="Enter a song" >
+            <button type="submit">Search</button>
+        </form>
+    </div>
+{% endblock %}

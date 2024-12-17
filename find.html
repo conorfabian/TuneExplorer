@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    find
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1>Search for: "{{ name }}"</h1>
+        <form action="/find" method="post">
+            <select name="song">
+                <option disabled="" selected="">Choose song</option>
+                {% for song in results %}
+                    <option class="container" value="{{ song['name'] }} {{ song['artists'][0]['name'] }}"><h3>{{ song["name"] }} by {{ song["artists"][0]["name"] }}</h3></option>
+                {% endfor %}
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

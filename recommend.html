@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    recommend
+{% endblock %}
+
+{% block main %}
+    <div>
+        <h1 class="container">Song Recommendations for: "{{ name }}" by {{ artist }}</h1>
+        <ol>
+            {% for song in recs %}
+                <li class="container"><h3>{{ song["name"] }} by {{ song["artists"][0]["name"] }}</h3></li>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock %}
