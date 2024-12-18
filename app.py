@@ -3,7 +3,7 @@ from flask import Flask, redirect, render_template, request, session
 from helpers import get_token, get_recommendations, search_for_song
 
 app = Flask(__name__)
-app.secret_key = "Okinawa3?"
+app.secret_key = "TuneExplorer"
 
 
 @app.route("/", methods=["GET", "POST"])
